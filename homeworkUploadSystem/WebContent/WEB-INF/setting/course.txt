@@ -1,0 +1,30 @@
+Evaluation
+idr,ids,score, comment
+varchar(50) UNIQUE,varchar(50) UNIQUE,varchar(50), varchar(50)
+Exam
+QID,Qus,Ans
+int UNIQUE,text,varchar(50)
+ExamDB
+QID,Type1,Type2,Qus,Ans
+int UNIQUE,varchar(50),varchar(50),text,smallint
+Homework
+id,stamp,title,FileDescription,filename,systemname,saveDirectory
+varchar(30),varchar(30),varchar(30),varchar(100),varchar(100),varchar(255),varchar(255)
+Login
+id,name,pass,score1,score2,score3,score4,score5,score6,score7,score8,score9,score10
+varchar(50) UNIQUE,varchar(50),varchar(50),varchar(50),varchar(50),varchar(50),varchar(50),varchar(50),varchar(50),varchar(50),varchar(50),varchar(50),varchar(50)
+Message
+type,id,title,memo,content,weights,language
+varchar(10),varchar(30),varchar(30),varchar(30),text,varchar(20),varchar(10)
+Ques
+ID,quesNum,currentNum,rightNum,question,userAns,startTime,endTime,maxEndTime
+varchar(50) UNIQUE,smallint,smallint,smallint,varchar(500),varchar(500),varchar(50),varchar(50),varchar(50)
+QuesNum
+ID,AllQues,quesNum,startTime,endTime
+varchar(50) UNIQUE,smallint,smallint,varchar(50),varchar(50)
+test_data
+id,question_id,input_data,true_result
+INT PRIMARY KEY AUTO_INCREMENT,int,text,text
+test_result
+id,question_id,student_id,test_data_id,result,description,excResult
+INT PRIMARY KEY AUTO_INCREMENT,int,varchar(50),int,int,text,varchar(200)
