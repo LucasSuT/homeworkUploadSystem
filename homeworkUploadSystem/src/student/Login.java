@@ -113,5 +113,6 @@ public class Login extends HttpServlet {
 			res.sendRedirect("MainMenu");
 		}
 		pw.close();
+		master test;
 	}
 }
